@@ -1,0 +1,81 @@
+.tab-header-background
+{
+	 -fx-background-color: #6a6a6a;
+}
+
+.tab-pane
+{
+    -fx-background-color: #525252;
+}
+
+.tab
+{
+    -fx-background-color: #969595;
+}
+
+.text
+{
+	-fx-fill : #FFF;
+}
+
+.text-field
+{
+	-fx-background-color: #969595;
+	-fx-text-fill : #ffffff;
+}
+
+.slider .axis:bottom
+{
+	-fx-tick-label-fill: #ffffff;
+}
+
+.color-picker .text
+{
+	-fx-fill : #000;
+}
+
+.color-picker .color-picker-label .text
+{
+	-fx-fill : #000;
+}
+
+.combo-box-base
+{
+	-fx-background-color: #363636,#a2a2a2,#989898,#969595;
+}
+
+/*plagarised code*/
+/*seems like Button's parent class ButtonBase's armed state overides node's pressed state*/
+/*so .button:armed not .button:pressed ... idk*/
+.button
+{
+    -fx-padding: 8 15 15 15;
+    -fx-background-insets: 0,0 0 5 0, 0 0 6 0, 0 0 7 0;
+    -fx-background-radius: 8;
+    -fx-background-color: 
+        linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100%),
+        #9d4024,
+        #d86e3a,
+        radial-gradient(center 50% 50%, radius 100%, #d86e3a, #c54e2c);
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );
+    -fx-font-weight: bold;
+    -fx-font-size: 1.1em;
+}
+.button:hover
+{
+    -fx-background-color: 
+        linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100%),
+        #9d4024,
+        #d86e3a,
+        radial-gradient(center 50% 50%, radius 100%, #ea7f4b, #c54e2c);
+}
+.button:armed
+{
+    -fx-padding: 10 15 13 15;
+    -fx-background-insets: 2 0 0 0,2 0 3 0, 2 0 4 0, 2 0 5 0;
+}
+.button Text
+{
+    -fx-fill: white;
+    -fx-effect: dropshadow( gaussian , #a30000 , 0,0,0,2 );
+}
