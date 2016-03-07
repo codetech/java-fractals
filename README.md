@@ -1,2 +1,2 @@
-# java-fractals
-Drawing the pythagoras treen (maybe other fractals too) in Java
+# Java Fractals
+Drawing the pythagoras tree in Java through JFX (some swing versions provided)
