@@ -50,7 +50,7 @@ class PythagorasTree extends JPanel
 	{
 		super.paintComponent(g);
 		((Graphics2D) g).setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-		(new Thread(() -> drawTree(g, 15, getWidth() / 2, getHeight() - 100, toRadians(90), toRadians(20), 100, 0.75))).start();
+		drawTree(g, 15, getWidth() / 2, getHeight() - 100, toRadians(90), toRadians(20), 100, 0.75);
 	}
 
 	public void drawTree(Graphics g, int iterations, int x, int y, double angle, double halfAngle, double size,
@@ -61,15 +61,6 @@ class PythagorasTree extends JPanel
 			int xPrime = (int) (x + cos(angle) * size);
 			int yPrime = (int) (y - sin(angle) * size);
 			g.setColor(Color.BLUE);
-
-			try
-			{
-				Thread.sleep(5);
-			} catch (InterruptedException e)
-			{
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 
 			g.drawLine(x, y, xPrime, yPrime);
 			drawTree(g, iterations - 1, xPrime, yPrime, angle + halfAngle, halfAngle, size * sizeModifier,
